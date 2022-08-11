@@ -1,0 +1,12 @@
+C:\Users\Aluno\Desktop\Sierra\Sierra\Sierra\bin\Debug\Sierra.exe.config
+C:\Users\Aluno\Desktop\Sierra\Sierra\Sierra\bin\Debug\Sierra.exe
+C:\Users\Aluno\Desktop\Sierra\Sierra\Sierra\bin\Debug\Sierra.pdb
+C:\Users\Aluno\Desktop\Sierra\Sierra\Sierra\obj\Debug\Sierra.csproj.AssemblyReference.cache
+C:\Users\Aluno\Desktop\Sierra\Sierra\Sierra\obj\Debug\Sierra.Form1.resources
+C:\Users\Aluno\Desktop\Sierra\Sierra\Sierra\obj\Debug\Sierra.Produtos.resources
+C:\Users\Aluno\Desktop\Sierra\Sierra\Sierra\obj\Debug\Sierra.Properties.Resources.resources
+C:\Users\Aluno\Desktop\Sierra\Sierra\Sierra\obj\Debug\Sierra.Usuarios.resources
+C:\Users\Aluno\Desktop\Sierra\Sierra\Sierra\obj\Debug\Sierra.csproj.GenerateResource.cache
+C:\Users\Aluno\Desktop\Sierra\Sierra\Sierra\obj\Debug\Sierra.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\Sierra\Sierra\Sierra\obj\Debug\Sierra.exe
+C:\Users\Aluno\Desktop\Sierra\Sierra\Sierra\obj\Debug\Sierra.pdb
