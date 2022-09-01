@@ -12,6 +12,19 @@ namespace Sierra
 {
     public partial class Form1 : Form
     {
+        //MUDAR AKI//
+        public struct usuar
+        {
+            public int codigo;
+            public string nome;
+            public string nivel;
+            public string login;
+            public string senha;
+        }
+            
+        static public usuar[] Usuarios = new usuar[10];
+        static public int contUsuario = 0;
+        //MUDAR AKI//
         public struct cliente
         {
             public int codigo;
@@ -97,6 +110,12 @@ namespace Sierra
                 string info10 = txttelefone.Text;
                 string info11 = txtemail.Text;
             }
+        }
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Usuarios novo = new Usuarios();
+            novo.ShowDialog();
         }
     }
 }

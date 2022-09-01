@@ -38,6 +38,9 @@ namespace Sierra
             this.usuariosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.clientesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.produtosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Código = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,22 +63,19 @@ namespace Sierra
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.produtosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
             this.relatoriosToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(908, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -92,19 +92,19 @@ namespace Sierra
             // clientesToolStripMenuItem1
             // 
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
             this.clientesToolStripMenuItem1.Text = "Usuarios";
             this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click_1);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(116, 6);
             // 
             // produtosToolStripMenuItem1
             // 
             this.produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
-            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
             this.produtosToolStripMenuItem1.Text = "Clientes";
             // 
             // relatoriosToolStripMenuItem
@@ -136,223 +136,15 @@ namespace Sierra
             this.clientesToolStripMenuItem2.Size = new System.Drawing.Size(122, 22);
             this.clientesToolStripMenuItem2.Text = "Clientes";
             // 
-            // Código
-            // 
-            this.Código.AutoSize = true;
-            this.Código.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Código.Location = new System.Drawing.Point(12, 41);
-            this.Código.Name = "Código";
-            this.Código.Size = new System.Drawing.Size(76, 24);
-            this.Código.TabIndex = 14;
-            this.Código.Text = "Código:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 24);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Descrição:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 165);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 24);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Unidade:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 206);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 24);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Quantidade:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 248);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 24);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Preço de custo:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(328, 248);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 24);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Preço de venda:";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(94, 40);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(140, 25);
-            this.richTextBox2.TabIndex = 20;
-            this.richTextBox2.Text = "";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(117, 84);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(317, 69);
-            this.richTextBox1.TabIndex = 21;
-            this.richTextBox1.Text = "";
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.Location = new System.Drawing.Point(104, 165);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(67, 25);
-            this.richTextBox3.TabIndex = 22;
-            this.richTextBox3.Text = "";
-            // 
-            // richTextBox4
-            // 
-            this.richTextBox4.Location = new System.Drawing.Point(131, 205);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(83, 25);
-            this.richTextBox4.TabIndex = 23;
-            this.richTextBox4.Text = "";
-            // 
-            // richTextBox5
-            // 
-            this.richTextBox5.Location = new System.Drawing.Point(160, 247);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(162, 25);
-            this.richTextBox5.TabIndex = 24;
-            this.richTextBox5.Text = "";
-            // 
-            // richTextBox6
-            // 
-            this.richTextBox6.Location = new System.Drawing.Point(483, 248);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(152, 25);
-            this.richTextBox6.TabIndex = 25;
-            this.richTextBox6.Text = "";
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.LightYellow;
-            this.button10.Location = new System.Drawing.Point(581, 318);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(120, 44);
-            this.button10.TabIndex = 51;
-            this.button10.Text = "Excluir";
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.LightYellow;
-            this.button8.Location = new System.Drawing.Point(455, 368);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(120, 44);
-            this.button8.TabIndex = 50;
-            this.button8.Text = "Imprimir";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.LightYellow;
-            this.button7.Location = new System.Drawing.Point(455, 318);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(120, 44);
-            this.button7.TabIndex = 49;
-            this.button7.Text = "Alterar";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.LightYellow;
-            this.button6.Location = new System.Drawing.Point(326, 318);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(120, 44);
-            this.button6.TabIndex = 48;
-            this.button6.Text = "Novo";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.LightYellow;
-            this.button5.Location = new System.Drawing.Point(326, 368);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(120, 44);
-            this.button5.TabIndex = 47;
-            this.button5.Text = "Pesquisa";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.LightYellow;
-            this.button4.Location = new System.Drawing.Point(200, 318);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 44);
-            this.button4.TabIndex = 46;
-            this.button4.Text = "Próximo";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.LightYellow;
-            this.button3.Location = new System.Drawing.Point(74, 368);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 44);
-            this.button3.TabIndex = 45;
-            this.button3.Text = "Salvar";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightYellow;
-            this.button2.Location = new System.Drawing.Point(200, 368);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 44);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LightYellow;
-            this.button1.Location = new System.Drawing.Point(74, 318);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 44);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Anterior";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.LightYellow;
-            this.button9.Location = new System.Drawing.Point(581, 368);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(120, 44);
-            this.button9.TabIndex = 42;
-            this.button9.Text = "Sair";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(119, 6);
             // 
             // produtosToolStripMenuItem2
             // 
             this.produtosToolStripMenuItem2.Name = "produtosToolStripMenuItem2";
-            this.produtosToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem2.Size = new System.Drawing.Size(122, 22);
             this.produtosToolStripMenuItem2.Text = "Produtos";
             // 
             // sairToolStripMenuItem
@@ -362,12 +154,236 @@ namespace Sierra
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // Código
+            // 
+            this.Código.AutoSize = true;
+            this.Código.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Código.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.Código.Location = new System.Drawing.Point(102, 75);
+            this.Código.Name = "Código";
+            this.Código.Size = new System.Drawing.Size(76, 24);
+            this.Código.TabIndex = 14;
+            this.Código.Text = "Código:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.label1.Location = new System.Drawing.Point(102, 144);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 24);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Descrição:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.label2.Location = new System.Drawing.Point(102, 199);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 24);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Unidade:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.label3.Location = new System.Drawing.Point(102, 240);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 24);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Quantidade:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.label4.Location = new System.Drawing.Point(102, 282);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 24);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Preço de custo:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.label5.Location = new System.Drawing.Point(418, 282);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(149, 24);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Preço de venda:";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(184, 74);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(140, 25);
+            this.richTextBox2.TabIndex = 20;
+            this.richTextBox2.Text = "";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(207, 118);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(317, 69);
+            this.richTextBox1.TabIndex = 21;
+            this.richTextBox1.Text = "";
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Location = new System.Drawing.Point(194, 199);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(67, 25);
+            this.richTextBox3.TabIndex = 22;
+            this.richTextBox3.Text = "";
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.Location = new System.Drawing.Point(221, 239);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.Size = new System.Drawing.Size(83, 25);
+            this.richTextBox4.TabIndex = 23;
+            this.richTextBox4.Text = "";
+            // 
+            // richTextBox5
+            // 
+            this.richTextBox5.Location = new System.Drawing.Point(250, 281);
+            this.richTextBox5.Name = "richTextBox5";
+            this.richTextBox5.Size = new System.Drawing.Size(162, 25);
+            this.richTextBox5.TabIndex = 24;
+            this.richTextBox5.Text = "";
+            // 
+            // richTextBox6
+            // 
+            this.richTextBox6.Location = new System.Drawing.Point(573, 282);
+            this.richTextBox6.Name = "richTextBox6";
+            this.richTextBox6.Size = new System.Drawing.Size(152, 25);
+            this.richTextBox6.TabIndex = 25;
+            this.richTextBox6.Text = "";
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Black;
+            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.button10.Location = new System.Drawing.Point(671, 352);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(120, 44);
+            this.button10.TabIndex = 51;
+            this.button10.Text = "Excluir";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Black;
+            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.button8.Location = new System.Drawing.Point(545, 402);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(120, 44);
+            this.button8.TabIndex = 50;
+            this.button8.Text = "Imprimir";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Black;
+            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.button7.Location = new System.Drawing.Point(545, 352);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(120, 44);
+            this.button7.TabIndex = 49;
+            this.button7.Text = "Alterar";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Black;
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.button6.Location = new System.Drawing.Point(416, 352);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(120, 44);
+            this.button6.TabIndex = 48;
+            this.button6.Text = "Novo";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Black;
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.button5.Location = new System.Drawing.Point(416, 402);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(120, 44);
+            this.button5.TabIndex = 47;
+            this.button5.Text = "Pesquisa";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Black;
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.button4.Location = new System.Drawing.Point(290, 352);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(120, 44);
+            this.button4.TabIndex = 46;
+            this.button4.Text = "Próximo";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.button3.Location = new System.Drawing.Point(164, 402);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(120, 44);
+            this.button3.TabIndex = 45;
+            this.button3.Text = "Salvar";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.button2.Location = new System.Drawing.Point(290, 402);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 44);
+            this.button2.TabIndex = 44;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.button1.Location = new System.Drawing.Point(164, 352);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 44);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Anterior";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Black;
+            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.button9.Location = new System.Drawing.Point(671, 402);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(120, 44);
+            this.button9.TabIndex = 42;
+            this.button9.Text = "Sair";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
             // Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(10)))), ((int)(((byte)(29)))));
+            this.ClientSize = new System.Drawing.Size(908, 497);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
