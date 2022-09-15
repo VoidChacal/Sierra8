@@ -46,38 +46,39 @@ namespace Sierra
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textcodigo = new System.Windows.Forms.RichTextBox();
-            this.textname = new System.Windows.Forms.RichTextBox();
-            this.textlevel = new System.Windows.Forms.RichTextBox();
-            this.textlogin = new System.Windows.Forms.RichTextBox();
-            this.textsenha = new System.Windows.Forms.RichTextBox();
-            this.excluir = new System.Windows.Forms.Button();
-            this.alterar = new System.Windows.Forms.Button();
-            this.novo = new System.Windows.Forms.Button();
-            this.pesquisa = new System.Windows.Forms.Button();
-            this.proximo = new System.Windows.Forms.Button();
-            this.cancelar = new System.Windows.Forms.Button();
-            this.sair = new System.Windows.Forms.Button();
-            this.imprimir = new System.Windows.Forms.Button();
-            this.salvar = new System.Windows.Forms.Button();
-            this.anterior = new System.Windows.Forms.Button();
+            this.codigoBox = new System.Windows.Forms.RichTextBox();
+            this.namebox = new System.Windows.Forms.RichTextBox();
+            this.nivelbox = new System.Windows.Forms.RichTextBox();
+            this.loginbox = new System.Windows.Forms.RichTextBox();
+            this.senhabox = new System.Windows.Forms.RichTextBox();
+            this.Excluir = new System.Windows.Forms.Button();
+            this.Imprimir = new System.Windows.Forms.Button();
+            this.Pesquisa = new System.Windows.Forms.Button();
+            this.Anterior = new System.Windows.Forms.Button();
+            this.Sair = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Salvar = new System.Windows.Forms.Button();
+            this.Alterar = new System.Windows.Forms.Button();
+            this.Novo = new System.Windows.Forms.Button();
+            this.Cancelar = new System.Windows.Forms.Button();
+            this.Proximo = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
             this.relatoriosToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(908, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1050, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // cadastrosToolStripMenuItem
             // 
@@ -85,6 +86,7 @@ namespace Sierra
             this.clientesToolStripMenuItem1,
             this.toolStripSeparator4,
             this.produtosToolStripMenuItem1});
+            this.cadastrosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -92,8 +94,9 @@ namespace Sierra
             // clientesToolStripMenuItem1
             // 
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem1.Text = "Clientes";
+            this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
             // 
             // toolStripSeparator4
             // 
@@ -114,6 +117,7 @@ namespace Sierra
             this.clientesToolStripMenuItem2,
             this.toolStripSeparator6,
             this.produtosToolStripMenuItem2});
+            this.relatoriosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
             this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.relatoriosToolStripMenuItem.Text = "Relatorios";
@@ -148,6 +152,7 @@ namespace Sierra
             // 
             // sairToolStripMenuItem
             // 
+            this.sairToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairToolStripMenuItem.Text = "Sair";
@@ -156,255 +161,272 @@ namespace Sierra
             // Código
             // 
             this.Código.AutoSize = true;
-            this.Código.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Código.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.Código.Location = new System.Drawing.Point(66, 68);
+            this.Código.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Código.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            this.Código.Location = new System.Drawing.Point(35, 109);
             this.Código.Name = "Código";
-            this.Código.Size = new System.Drawing.Size(86, 33);
+            this.Código.Size = new System.Drawing.Size(74, 25);
             this.Código.TabIndex = 15;
             this.Código.Text = "Código:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 14.25F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.label1.Location = new System.Drawing.Point(66, 102);
+            this.label1.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            this.label1.Location = new System.Drawing.Point(35, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 33);
+            this.label1.Size = new System.Drawing.Size(69, 25);
             this.label1.TabIndex = 16;
             this.label1.Text = "Nome:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe Print", 14.25F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.label2.Location = new System.Drawing.Point(66, 137);
+            this.label2.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            this.label2.Location = new System.Drawing.Point(35, 179);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 33);
+            this.label2.Size = new System.Drawing.Size(62, 25);
             this.label2.TabIndex = 17;
             this.label2.Text = "Nivel:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe Print", 14.25F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.label3.Location = new System.Drawing.Point(59, 179);
+            this.label3.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            this.label3.Location = new System.Drawing.Point(35, 212);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 33);
+            this.label3.Size = new System.Drawing.Size(65, 25);
             this.label3.TabIndex = 18;
             this.label3.Text = "Login:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe Print", 14.25F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.label4.Location = new System.Drawing.Point(54, 219);
+            this.label4.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            this.label4.Location = new System.Drawing.Point(34, 252);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 33);
+            this.label4.Size = new System.Drawing.Size(70, 25);
             this.label4.TabIndex = 19;
             this.label4.Text = "Senha:";
             // 
-            // textcodigo
+            // codigoBox
             // 
-            this.textcodigo.Location = new System.Drawing.Point(158, 76);
-            this.textcodigo.Name = "textcodigo";
-            this.textcodigo.Size = new System.Drawing.Size(140, 25);
-            this.textcodigo.TabIndex = 21;
-            this.textcodigo.Text = "";
+            this.codigoBox.Location = new System.Drawing.Point(130, 109);
+            this.codigoBox.Name = "codigoBox";
+            this.codigoBox.ReadOnly = true;
+            this.codigoBox.Size = new System.Drawing.Size(231, 25);
+            this.codigoBox.TabIndex = 21;
+            this.codigoBox.Text = "";
             // 
-            // textname
+            // namebox
             // 
-            this.textname.Location = new System.Drawing.Point(149, 110);
-            this.textname.Name = "textname";
-            this.textname.Size = new System.Drawing.Size(308, 25);
-            this.textname.TabIndex = 22;
-            this.textname.Text = "";
+            this.namebox.Location = new System.Drawing.Point(130, 143);
+            this.namebox.Name = "namebox";
+            this.namebox.Size = new System.Drawing.Size(399, 25);
+            this.namebox.TabIndex = 22;
+            this.namebox.Text = "";
             // 
-            // textlevel
+            // nivelbox
             // 
-            this.textlevel.Location = new System.Drawing.Point(139, 145);
-            this.textlevel.Name = "textlevel";
-            this.textlevel.Size = new System.Drawing.Size(43, 25);
-            this.textlevel.TabIndex = 23;
-            this.textlevel.Text = "";
+            this.nivelbox.Location = new System.Drawing.Point(120, 178);
+            this.nivelbox.Name = "nivelbox";
+            this.nivelbox.Size = new System.Drawing.Size(134, 25);
+            this.nivelbox.TabIndex = 23;
+            this.nivelbox.Text = "";
             // 
-            // textlogin
+            // loginbox
             // 
-            this.textlogin.Location = new System.Drawing.Point(139, 179);
-            this.textlogin.Name = "textlogin";
-            this.textlogin.Size = new System.Drawing.Size(251, 25);
-            this.textlogin.TabIndex = 24;
-            this.textlogin.Text = "";
+            this.loginbox.Location = new System.Drawing.Point(120, 212);
+            this.loginbox.Name = "loginbox";
+            this.loginbox.Size = new System.Drawing.Size(342, 25);
+            this.loginbox.TabIndex = 24;
+            this.loginbox.Text = "";
             // 
-            // textsenha
+            // senhabox
             // 
-            this.textsenha.Location = new System.Drawing.Point(139, 219);
-            this.textsenha.Name = "textsenha";
-            this.textsenha.Size = new System.Drawing.Size(251, 25);
-            this.textsenha.TabIndex = 25;
-            this.textsenha.Text = "";
-            this.textsenha.TextChanged += new System.EventHandler(this.textsenha_TextChanged);
+            this.senhabox.Location = new System.Drawing.Point(130, 252);
+            this.senhabox.Name = "senhabox";
+            this.senhabox.Size = new System.Drawing.Size(342, 25);
+            this.senhabox.TabIndex = 25;
+            this.senhabox.Text = "";
+            this.senhabox.TextChanged += new System.EventHandler(this.senhabox_TextChanged);
             // 
-            // excluir
+            // Excluir
             // 
-            this.excluir.BackColor = System.Drawing.Color.Black;
-            this.excluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.excluir.Location = new System.Drawing.Point(649, 314);
-            this.excluir.Name = "excluir";
-            this.excluir.Size = new System.Drawing.Size(120, 44);
-            this.excluir.TabIndex = 61;
-            this.excluir.Text = "Excluir";
-            this.excluir.UseVisualStyleBackColor = false;
-            this.excluir.Click += new System.EventHandler(this.excluir_Click);
+            this.Excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.Excluir.Enabled = false;
+            this.Excluir.Font = new System.Drawing.Font("Segoe Print", 9.75F);
+            this.Excluir.ForeColor = System.Drawing.Color.Black;
+            this.Excluir.Location = new System.Drawing.Point(883, 423);
+            this.Excluir.Name = "Excluir";
+            this.Excluir.Size = new System.Drawing.Size(118, 49);
+            this.Excluir.TabIndex = 61;
+            this.Excluir.Text = "Excluir";
+            this.Excluir.UseVisualStyleBackColor = false;
+            this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
-            // alterar
+            // Imprimir
             // 
-            this.alterar.BackColor = System.Drawing.Color.Black;
-            this.alterar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.alterar.Location = new System.Drawing.Point(523, 314);
-            this.alterar.Name = "alterar";
-            this.alterar.Size = new System.Drawing.Size(120, 44);
-            this.alterar.TabIndex = 59;
-            this.alterar.Text = "Alterar";
-            this.alterar.UseVisualStyleBackColor = false;
-            this.alterar.Click += new System.EventHandler(this.alterar_Click);
+            this.Imprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.Imprimir.Font = new System.Drawing.Font("Segoe Print", 9.75F);
+            this.Imprimir.ForeColor = System.Drawing.Color.Black;
+            this.Imprimir.Location = new System.Drawing.Point(668, 473);
+            this.Imprimir.Name = "Imprimir";
+            this.Imprimir.Size = new System.Drawing.Size(210, 49);
+            this.Imprimir.TabIndex = 60;
+            this.Imprimir.Text = "Imprimir";
+            this.Imprimir.UseVisualStyleBackColor = false;
+            this.Imprimir.Click += new System.EventHandler(this.Imprimir_Click);
             // 
-            // novo
+            // Pesquisa
             // 
-            this.novo.BackColor = System.Drawing.Color.Black;
-            this.novo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.novo.Location = new System.Drawing.Point(394, 314);
-            this.novo.Name = "novo";
-            this.novo.Size = new System.Drawing.Size(120, 44);
-            this.novo.TabIndex = 58;
-            this.novo.Text = "Novo";
-            this.novo.UseVisualStyleBackColor = false;
-            this.novo.Click += new System.EventHandler(this.novo_Click);
+            this.Pesquisa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.Pesquisa.Font = new System.Drawing.Font("Segoe Print", 9.75F);
+            this.Pesquisa.ForeColor = System.Drawing.Color.Black;
+            this.Pesquisa.Location = new System.Drawing.Point(452, 473);
+            this.Pesquisa.Name = "Pesquisa";
+            this.Pesquisa.Size = new System.Drawing.Size(210, 49);
+            this.Pesquisa.TabIndex = 57;
+            this.Pesquisa.Text = "Pesquisa";
+            this.Pesquisa.UseVisualStyleBackColor = false;
             // 
-            // pesquisa
+            // Anterior
             // 
-            this.pesquisa.BackColor = System.Drawing.Color.Black;
-            this.pesquisa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.pesquisa.Location = new System.Drawing.Point(394, 364);
-            this.pesquisa.Name = "pesquisa";
-            this.pesquisa.Size = new System.Drawing.Size(120, 44);
-            this.pesquisa.TabIndex = 57;
-            this.pesquisa.Text = "Pesquisa";
-            this.pesquisa.UseVisualStyleBackColor = false;
-            this.pesquisa.Click += new System.EventHandler(this.pesquisa_Click);
+            this.Anterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.Anterior.Enabled = false;
+            this.Anterior.Font = new System.Drawing.Font("Segoe Print", 9.75F);
+            this.Anterior.ForeColor = System.Drawing.Color.Black;
+            this.Anterior.Location = new System.Drawing.Point(20, 423);
+            this.Anterior.Name = "Anterior";
+            this.Anterior.Size = new System.Drawing.Size(210, 49);
+            this.Anterior.TabIndex = 53;
+            this.Anterior.Text = "Anterior";
+            this.Anterior.UseVisualStyleBackColor = false;
+            this.Anterior.Click += new System.EventHandler(this.Anterior_Click);
             // 
-            // proximo
+            // Sair
             // 
-            this.proximo.BackColor = System.Drawing.Color.Black;
-            this.proximo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.proximo.Location = new System.Drawing.Point(268, 314);
-            this.proximo.Name = "proximo";
-            this.proximo.Size = new System.Drawing.Size(120, 44);
-            this.proximo.TabIndex = 56;
-            this.proximo.Text = "Próximo";
-            this.proximo.UseVisualStyleBackColor = false;
-            this.proximo.Click += new System.EventHandler(this.proximo_Click);
-            // 
-            // cancelar
-            // 
-            this.cancelar.BackColor = System.Drawing.Color.Black;
-            this.cancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.cancelar.Location = new System.Drawing.Point(268, 364);
-            this.cancelar.Name = "cancelar";
-            this.cancelar.Size = new System.Drawing.Size(120, 44);
-            this.cancelar.TabIndex = 54;
-            this.cancelar.Text = "Cancelar";
-            this.cancelar.UseVisualStyleBackColor = false;
-            this.cancelar.Click += new System.EventHandler(this.cancelar_Click);
-            // 
-            // sair
-            // 
-            this.sair.BackColor = System.Drawing.Color.Black;
-            this.sair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.sair.Location = new System.Drawing.Point(649, 364);
-            this.sair.Name = "sair";
-            this.sair.Size = new System.Drawing.Size(120, 44);
-            this.sair.TabIndex = 52;
-            this.sair.Text = "Sair";
-            this.sair.UseVisualStyleBackColor = false;
-            this.sair.Click += new System.EventHandler(this.sair_Click);
-            // 
-            // imprimir
-            // 
-            this.imprimir.BackColor = System.Drawing.Color.Black;
-            this.imprimir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.imprimir.Location = new System.Drawing.Point(523, 364);
-            this.imprimir.Name = "imprimir";
-            this.imprimir.Size = new System.Drawing.Size(120, 44);
-            this.imprimir.TabIndex = 62;
-            this.imprimir.Text = "Imprimir";
-            this.imprimir.UseVisualStyleBackColor = false;
-            this.imprimir.Click += new System.EventHandler(this.imprimir_Click);
-            // 
-            // salvar
-            // 
-            this.salvar.BackColor = System.Drawing.Color.Black;
-            this.salvar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.salvar.Location = new System.Drawing.Point(142, 364);
-            this.salvar.Name = "salvar";
-            this.salvar.Size = new System.Drawing.Size(120, 44);
-            this.salvar.TabIndex = 63;
-            this.salvar.Text = "Salvar";
-            this.salvar.UseVisualStyleBackColor = false;
-            this.salvar.Click += new System.EventHandler(this.salvar_Click);
-            // 
-            // anterior
-            // 
-            this.anterior.BackColor = System.Drawing.Color.Black;
-            this.anterior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.anterior.Location = new System.Drawing.Point(142, 314);
-            this.anterior.Name = "anterior";
-            this.anterior.Size = new System.Drawing.Size(120, 44);
-            this.anterior.TabIndex = 64;
-            this.anterior.Text = "Anterior";
-            this.anterior.UseVisualStyleBackColor = false;
-            this.anterior.Click += new System.EventHandler(this.anterior_Click);
+            this.Sair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.Sair.Font = new System.Drawing.Font("Segoe Print", 9.75F);
+            this.Sair.ForeColor = System.Drawing.Color.Black;
+            this.Sair.Location = new System.Drawing.Point(883, 473);
+            this.Sair.Name = "Sair";
+            this.Sair.Size = new System.Drawing.Size(118, 49);
+            this.Sair.TabIndex = 52;
+            this.Sair.Text = "Sair";
+            this.Sair.UseVisualStyleBackColor = false;
+            this.Sair.Click += new System.EventHandler(this.Sair_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.groupBox1.Controls.Add(this.Proximo);
+            this.groupBox1.Controls.Add(this.Cancelar);
+            this.groupBox1.Controls.Add(this.Novo);
+            this.groupBox1.Controls.Add(this.Alterar);
+            this.groupBox1.Controls.Add(this.Salvar);
             this.groupBox1.Controls.Add(this.Código);
-            this.groupBox1.Controls.Add(this.anterior);
+            this.groupBox1.Controls.Add(this.Excluir);
+            this.groupBox1.Controls.Add(this.Sair);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.salvar);
+            this.groupBox1.Controls.Add(this.Imprimir);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.imprimir);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.excluir);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.alterar);
-            this.groupBox1.Controls.Add(this.textcodigo);
-            this.groupBox1.Controls.Add(this.novo);
-            this.groupBox1.Controls.Add(this.textname);
-            this.groupBox1.Controls.Add(this.pesquisa);
-            this.groupBox1.Controls.Add(this.textlevel);
-            this.groupBox1.Controls.Add(this.proximo);
-            this.groupBox1.Controls.Add(this.textlogin);
-            this.groupBox1.Controls.Add(this.cancelar);
-            this.groupBox1.Controls.Add(this.textsenha);
-            this.groupBox1.Controls.Add(this.sair);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.groupBox1.Location = new System.Drawing.Point(12, 36);
+            this.groupBox1.Controls.Add(this.Pesquisa);
+            this.groupBox1.Controls.Add(this.codigoBox);
+            this.groupBox1.Controls.Add(this.namebox);
+            this.groupBox1.Controls.Add(this.nivelbox);
+            this.groupBox1.Controls.Add(this.loginbox);
+            this.groupBox1.Controls.Add(this.Anterior);
+            this.groupBox1.Controls.Add(this.senhabox);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe Print", 9.75F);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(12, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(884, 449);
-            this.groupBox1.TabIndex = 65;
+            this.groupBox1.Size = new System.Drawing.Size(1026, 527);
+            this.groupBox1.TabIndex = 62;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Usuarios";
+            // 
+            // Salvar
+            // 
+            this.Salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.Salvar.Font = new System.Drawing.Font("Segoe Print", 9.75F);
+            this.Salvar.ForeColor = System.Drawing.Color.Black;
+            this.Salvar.Location = new System.Drawing.Point(236, 472);
+            this.Salvar.Name = "Salvar";
+            this.Salvar.Size = new System.Drawing.Size(210, 49);
+            this.Salvar.TabIndex = 62;
+            this.Salvar.Text = "Salvar";
+            this.Salvar.UseVisualStyleBackColor = false;
+            this.Salvar.Click += new System.EventHandler(this.Salvar_Click);
+            // 
+            // Alterar
+            // 
+            this.Alterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.Alterar.Enabled = false;
+            this.Alterar.Font = new System.Drawing.Font("Segoe Print", 9.75F);
+            this.Alterar.ForeColor = System.Drawing.Color.Black;
+            this.Alterar.Location = new System.Drawing.Point(668, 423);
+            this.Alterar.Name = "Alterar";
+            this.Alterar.Size = new System.Drawing.Size(210, 49);
+            this.Alterar.TabIndex = 63;
+            this.Alterar.Text = "Alterar";
+            this.Alterar.UseVisualStyleBackColor = false;
+            this.Alterar.Click += new System.EventHandler(this.Alterar_Click);
+            // 
+            // Novo
+            // 
+            this.Novo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.Novo.Font = new System.Drawing.Font("Segoe Print", 9.75F);
+            this.Novo.ForeColor = System.Drawing.Color.Black;
+            this.Novo.Location = new System.Drawing.Point(452, 423);
+            this.Novo.Name = "Novo";
+            this.Novo.Size = new System.Drawing.Size(210, 49);
+            this.Novo.TabIndex = 64;
+            this.Novo.Text = "Novo";
+            this.Novo.UseVisualStyleBackColor = false;
+            this.Novo.Click += new System.EventHandler(this.Novo_Click);
+            // 
+            // Cancelar
+            // 
+            this.Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.Cancelar.Enabled = false;
+            this.Cancelar.Font = new System.Drawing.Font("Segoe Print", 9.75F);
+            this.Cancelar.ForeColor = System.Drawing.Color.Black;
+            this.Cancelar.Location = new System.Drawing.Point(236, 423);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(210, 49);
+            this.Cancelar.TabIndex = 65;
+            this.Cancelar.Text = "Cancelar";
+            this.Cancelar.UseVisualStyleBackColor = false;
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
+            // 
+            // Proximo
+            // 
+            this.Proximo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.Proximo.Enabled = false;
+            this.Proximo.Font = new System.Drawing.Font("Segoe Print", 9.75F);
+            this.Proximo.ForeColor = System.Drawing.Color.Black;
+            this.Proximo.Location = new System.Drawing.Point(20, 472);
+            this.Proximo.Name = "Proximo";
+            this.Proximo.Size = new System.Drawing.Size(210, 49);
+            this.Proximo.TabIndex = 66;
+            this.Proximo.Text = "Próximo";
+            this.Proximo.UseVisualStyleBackColor = false;
+            this.Proximo.Click += new System.EventHandler(this.Proximo_Click);
             // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(10)))), ((int)(((byte)(29)))));
-            this.ClientSize = new System.Drawing.Size(908, 497);
+            this.ClientSize = new System.Drawing.Size(1050, 578);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Usuarios";
@@ -436,23 +458,23 @@ namespace Sierra
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox textcodigo;
-        private System.Windows.Forms.RichTextBox textname;
-        private System.Windows.Forms.RichTextBox textlevel;
-        private System.Windows.Forms.RichTextBox textlogin;
-        private System.Windows.Forms.RichTextBox textsenha;
-        private System.Windows.Forms.Button excluir;
-        private System.Windows.Forms.Button alterar;
-        private System.Windows.Forms.Button novo;
-        private System.Windows.Forms.Button pesquisa;
-        private System.Windows.Forms.Button proximo;
-        private System.Windows.Forms.Button cancelar;
-        private System.Windows.Forms.Button sair;
+        private System.Windows.Forms.RichTextBox codigoBox;
+        private System.Windows.Forms.RichTextBox namebox;
+        private System.Windows.Forms.RichTextBox nivelbox;
+        private System.Windows.Forms.RichTextBox loginbox;
+        private System.Windows.Forms.RichTextBox senhabox;
+        private System.Windows.Forms.Button Excluir;
+        private System.Windows.Forms.Button Imprimir;
+        private System.Windows.Forms.Button Pesquisa;
+        private System.Windows.Forms.Button Anterior;
+        private System.Windows.Forms.Button Sair;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.Button imprimir;
-        private System.Windows.Forms.Button salvar;
-        private System.Windows.Forms.Button anterior;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button Salvar;
+        private System.Windows.Forms.Button Alterar;
+        private System.Windows.Forms.Button Novo;
+        private System.Windows.Forms.Button Cancelar;
+        private System.Windows.Forms.Button Proximo;
     }
 }

@@ -14,48 +14,7 @@ namespace Sierra
     {
         bool tipoEdicao = false;
         int atual = 0;
-        private void habilitaEdicao()
-        {
-            textcodigo.Enabled = false;
-            textname.Enabled = true;
-            textlevel.Enabled = true;
-            textlogin.Enabled = true;
-            textsenha.Enabled = true;
-            salvar.Enabled = true;
-            cancelar.Enabled = false;
-            anterior.Enabled = false;
-            proximo.Enabled = false;
-            novo.Enabled = false;
-            alterar.Enabled = false;
-            pesquisa.Enabled = false;
-            imprimir.Enabled = false;
-            sair.Enabled = false;
-        }
-        private void desabilitaEdicao()
-        {
-            textcodigo.Enabled = false;
-            textname.Enabled = false;
-            textlevel.Enabled = false;
-            textlogin.Enabled = false;
-            textsenha.Enabled = false;
-            salvar.Enabled = false;
-            cancelar.Enabled = false;
-            anterior.Enabled = true;
-            proximo.Enabled = true;
-            novo.Enabled = true;
-            alterar.Enabled = true;
-            pesquisa.Enabled = true;
-            imprimir.Enabled = true;
-            sair.Enabled = true;
-        }
-        private void exibirdados()
-        {
-            textcodigo.Text = Form1.Usuarios[atual].codigo.ToString();
-            textname.Text = Form1.Usuarios[atual].nome;
-            textlevel.Text = Form1.Usuarios[atual].nivel;
-            textlogin.Text = Form1.Usuarios[atual].login;
-            textsenha.Text = Form1.Usuarios[atual].senha;
-        }
+
         public Usuarios()
         {
             InitializeComponent();
@@ -68,133 +27,80 @@ namespace Sierra
 
         private void Usuarios_Load(object sender, EventArgs e)
         {
-            desabilitaEdicao();
-            exibirdados();
+
         }
 
-        
-        private void button1_Click(object sender, EventArgs e)
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Excluir_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void cancelar_Click(object sender, EventArgs e)
+        private void senhabox_TextChanged(object sender, EventArgs e)
         {
-            desabilitaEdicao();
-            exibirdados();
+
         }
 
-        private void pesquisa_Click(object sender, EventArgs e)
+        private void Salvar_Click(object sender, EventArgs e)
         {
-            pesquisa.Visible = true;
-            
+            Excluir.Enabled = true;
+            Alterar.Enabled = true;
         }
 
-        private void proximo_Click(object sender, EventArgs e)
+        private void Sair_Click(object sender, EventArgs e)
         {
-            if (atual < Form1.contUsuario - 1)
-            {
-                atual++;
-                exibirdados();
-            }
-            else MessageBox.Show("Fim de arquivo1");
+
         }
 
-        private void novo_Click(object sender, EventArgs e)
+        private void Imprimir_Click(object sender, EventArgs e)
         {
-            if (Form1.contUsuario < 10)
-            {
-                textcodigo.Text = (Form1.contUsuario + 1).ToString();
-                textname.Text = "";
-                textlevel.Text = "";
-                textlogin.Text = "";
-                textsenha.Text = "";
-                habilitaEdicao();
+
+        }
+
+        private void Alterar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Novo_Click(object sender, EventArgs e)
+        {
+          
+                namebox.Text = "";
+                nivelbox.Text = "";
+                loginbox.Text = "";
+                senhabox.Text = "";
                 tipoEdicao = true;
-            }
-            else MessageBox.Show("Arquivo cheio!");
-        }
 
-        private void alterar_Click(object sender, EventArgs e)
+
+            Anterior.Enabled = true;
+            Proximo.Enabled = true;
+
+            }
+
+           
+        private void Cancelar_Click(object sender, EventArgs e)
         {
-            if (Form1.contUsuario > 0)
-            {
-                habilitaEdicao();
-                tipoEdicao = false;
-            }
-            else MessageBox.Show("Arquivo vazio!");
+
         }
 
-        private void excluir_Click(object sender, EventArgs e)
+        private void Anterior_Click(object sender, EventArgs e)
         {
-            if (Form1.contUsuario > 0)
-            {
-                Form1.Usuarios[atual].nome = "";
-                Form1.Usuarios[atual].nivel = "";
-                Form1.Usuarios[atual].login = "";
-                Form1.Usuarios[atual].senha = "";
-                exibirdados();
-                
-            }
+
         }
 
-        private void sair_Click(object sender, EventArgs e)
+        private void Proximo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void imprimir_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void salvar_Click(object sender, EventArgs e)
-        {
-            if (tipoEdicao)
-            {
-                Form1.Usuarios[Form1.contUsuario].codigo = int.Parse(textcodigo.Text);
-                Form1.Usuarios[Form1.contUsuario].nome = textname.Text;
-                Form1.Usuarios[Form1.contUsuario].nivel = textcodigo.Text;
-                Form1.Usuarios[Form1.contUsuario].nivel = textlevel.Text;
-                Form1.Usuarios[Form1.contUsuario].login = textlogin.Text;
-                Form1.Usuarios[Form1.contUsuario].senha = textsenha.Text;
-                atual = Form1.contUsuario++;
-            }
-            else
-            {
-                Form1.Usuarios[atual].nome = textname.Text;
-                Form1.Usuarios[atual].login = textlogin.Text;
-                Form1.Usuarios[atual].nivel = textlevel.Text;
-                Form1.Usuarios[atual].senha = textsenha.Text;
-                
-            }
-            desabilitaEdicao();
-            
-        }
-
-        private void textsenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void anterior_Click(object sender, EventArgs e)
-        {
-            if (atual > 0)
-            {
-                atual--;
-                exibirdados();
-            }
-            else MessageBox.Show("Início do arquivo!");
         }
     }
 }
