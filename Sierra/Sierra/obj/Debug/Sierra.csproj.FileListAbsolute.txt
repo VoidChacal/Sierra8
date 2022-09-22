@@ -23,3 +23,17 @@ E:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.csproj.GenerateResource.ca
 E:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.csproj.CoreCompileInputs.cache
 E:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.exe
 E:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.pdb
+F:\Sierra8-main\Sierra\Sierra\Sierra\bin\Debug\Sierra.exe.config
+F:\Sierra8-main\Sierra\Sierra\Sierra\bin\Debug\Sierra.exe
+F:\Sierra8-main\Sierra\Sierra\Sierra\bin\Debug\Sierra.pdb
+F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.csproj.AssemblyReference.cache
+F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.csproj.SuggestedBindingRedirects.cache
+F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.Cadastrar.resources
+F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.Form1.resources
+F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.Produtos.resources
+F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.Properties.Resources.resources
+F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.Usuarios.resources
+F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.csproj.GenerateResource.cache
+F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.csproj.CoreCompileInputs.cache
+F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.exe
+F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.pdb

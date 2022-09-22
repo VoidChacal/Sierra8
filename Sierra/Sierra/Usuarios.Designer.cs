@@ -70,11 +70,7 @@ namespace Sierra
             this.procurar = new System.Windows.Forms.Button();
             this.textpesquisa = new System.Windows.Forms.RichTextBox();
             this.Documento1 = new System.Drawing.Printing.PrintDocument();
-            this.Documento2 = new System.Drawing.Printing.PrintDocument();
-            this.Documento3 = new System.Drawing.Printing.PrintDocument();
             this.Preview1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.Preview2 = new System.Windows.Forms.PrintPreviewDialog();
-            this.Preview3 = new System.Windows.Forms.PrintPreviewDialog();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.painel.SuspendLayout();
@@ -230,6 +226,7 @@ namespace Sierra
             this.textcodigo.Size = new System.Drawing.Size(140, 25);
             this.textcodigo.TabIndex = 21;
             this.textcodigo.Text = "";
+            this.textcodigo.TextChanged += new System.EventHandler(this.textcodigo_TextChanged);
             // 
             // textname
             // 
@@ -505,10 +502,6 @@ namespace Sierra
             // 
             this.Documento1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.Documento1_PrintPage);
             // 
-            // Documento2
-            // 
-            this.Documento2.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.Documento2_PrintPage);
-            // 
             // Preview1
             // 
             this.Preview1.AutoScrollMargin = new System.Drawing.Size(0, 0);
@@ -520,28 +513,6 @@ namespace Sierra
             this.Preview1.Name = "Preview1";
             this.Preview1.Visible = false;
             this.Preview1.Load += new System.EventHandler(this.Preview1_Load);
-            // 
-            // Preview2
-            // 
-            this.Preview2.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.Preview2.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.Preview2.ClientSize = new System.Drawing.Size(400, 300);
-            this.Preview2.Document = this.Documento2;
-            this.Preview2.Enabled = true;
-            this.Preview2.Icon = ((System.Drawing.Icon)(resources.GetObject("Preview2.Icon")));
-            this.Preview2.Name = "Preview2";
-            this.Preview2.Visible = false;
-            // 
-            // Preview3
-            // 
-            this.Preview3.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.Preview3.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.Preview3.ClientSize = new System.Drawing.Size(400, 300);
-            this.Preview3.Document = this.Documento3;
-            this.Preview3.Enabled = true;
-            this.Preview3.Icon = ((System.Drawing.Icon)(resources.GetObject("Preview3.Icon")));
-            this.Preview3.Name = "Preview3";
-            this.Preview3.Visible = false;
             // 
             // Usuarios
             // 
@@ -607,10 +578,6 @@ namespace Sierra
         private System.Windows.Forms.Button procurar;
         private System.Windows.Forms.RichTextBox textpesquisa;
         private System.Drawing.Printing.PrintDocument Documento1;
-        private System.Drawing.Printing.PrintDocument Documento2;
-        private System.Drawing.Printing.PrintDocument Documento3;
         private System.Windows.Forms.PrintPreviewDialog Preview1;
-        private System.Windows.Forms.PrintPreviewDialog Preview2;
-        private System.Windows.Forms.PrintPreviewDialog Preview3;
     }
 }

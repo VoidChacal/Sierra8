@@ -29,6 +29,7 @@ namespace Sierra
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Produtos));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,8 +65,17 @@ namespace Sierra
             this.Anterior = new System.Windows.Forms.Button();
             this.Sair = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.painel = new System.Windows.Forms.Panel();
+            this.Voltar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.procurar = new System.Windows.Forms.Button();
+            this.textpesquisa = new System.Windows.Forms.RichTextBox();
+            this.Document = new System.Drawing.Printing.PrintDocument();
+            this.Preview = new System.Windows.Forms.PrintPreviewDialog();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.painel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -266,6 +276,7 @@ namespace Sierra
             this.textcusto.Size = new System.Drawing.Size(162, 25);
             this.textcusto.TabIndex = 24;
             this.textcusto.Text = "";
+            this.textcusto.TextChanged += new System.EventHandler(this.textcusto_TextChanged);
             // 
             // textvenda
             // 
@@ -287,6 +298,7 @@ namespace Sierra
             this.Excluir.TabIndex = 51;
             this.Excluir.Text = "Excluir";
             this.Excluir.UseVisualStyleBackColor = false;
+            this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
             // Imprimir
             // 
@@ -311,6 +323,7 @@ namespace Sierra
             this.Alterar.TabIndex = 49;
             this.Alterar.Text = "Alterar";
             this.Alterar.UseVisualStyleBackColor = false;
+            this.Alterar.Click += new System.EventHandler(this.Alterar_Click);
             // 
             // Novo
             // 
@@ -323,6 +336,7 @@ namespace Sierra
             this.Novo.TabIndex = 48;
             this.Novo.Text = "Novo";
             this.Novo.UseVisualStyleBackColor = false;
+            this.Novo.Click += new System.EventHandler(this.Novo_Click);
             // 
             // Pesquisa
             // 
@@ -348,6 +362,7 @@ namespace Sierra
             this.Proximo.TabIndex = 46;
             this.Proximo.Text = "Próximo";
             this.Proximo.UseVisualStyleBackColor = false;
+            this.Proximo.Click += new System.EventHandler(this.Proximo_Click);
             // 
             // Salvar
             // 
@@ -360,6 +375,7 @@ namespace Sierra
             this.Salvar.TabIndex = 45;
             this.Salvar.Text = "Salvar";
             this.Salvar.UseVisualStyleBackColor = false;
+            this.Salvar.Click += new System.EventHandler(this.Salvar_Click);
             // 
             // Cancelar
             // 
@@ -372,6 +388,7 @@ namespace Sierra
             this.Cancelar.TabIndex = 44;
             this.Cancelar.Text = "Cancelar";
             this.Cancelar.UseVisualStyleBackColor = false;
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // Anterior
             // 
@@ -397,9 +414,11 @@ namespace Sierra
             this.Sair.TabIndex = 42;
             this.Sair.Text = "Sair";
             this.Sair.UseVisualStyleBackColor = false;
+            this.Sair.Click += new System.EventHandler(this.Sair_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.painel);
             this.groupBox1.Controls.Add(this.Código);
             this.groupBox1.Controls.Add(this.Excluir);
             this.groupBox1.Controls.Add(this.label1);
@@ -431,6 +450,91 @@ namespace Sierra
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Produto";
             // 
+            // painel
+            // 
+            this.painel.Controls.Add(this.Voltar);
+            this.painel.Controls.Add(this.label6);
+            this.painel.Controls.Add(this.label7);
+            this.painel.Controls.Add(this.procurar);
+            this.painel.Controls.Add(this.textpesquisa);
+            this.painel.Location = new System.Drawing.Point(167, 95);
+            this.painel.Name = "painel";
+            this.painel.Size = new System.Drawing.Size(539, 246);
+            this.painel.TabIndex = 66;
+            this.painel.Visible = false;
+            // 
+            // Voltar
+            // 
+            this.Voltar.BackColor = System.Drawing.Color.Black;
+            this.Voltar.Font = new System.Drawing.Font("Segoe Print", 14.25F);
+            this.Voltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.Voltar.Location = new System.Drawing.Point(82, 182);
+            this.Voltar.Name = "Voltar";
+            this.Voltar.Size = new System.Drawing.Size(120, 44);
+            this.Voltar.TabIndex = 68;
+            this.Voltar.Text = "Voltar";
+            this.Voltar.UseVisualStyleBackColor = false;
+            this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.label6.Location = new System.Drawing.Point(165, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(267, 47);
+            this.label6.TabIndex = 67;
+            this.label6.Text = "Painel de Pesquisa";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.label7.Location = new System.Drawing.Point(5, 74);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(112, 33);
+            this.label7.TabIndex = 66;
+            this.label7.Text = "Descrição:";
+            // 
+            // procurar
+            // 
+            this.procurar.BackColor = System.Drawing.Color.Black;
+            this.procurar.Font = new System.Drawing.Font("Segoe Print", 14.25F);
+            this.procurar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.procurar.Location = new System.Drawing.Point(348, 182);
+            this.procurar.Name = "procurar";
+            this.procurar.Size = new System.Drawing.Size(120, 44);
+            this.procurar.TabIndex = 66;
+            this.procurar.Text = "Procurar";
+            this.procurar.UseVisualStyleBackColor = false;
+            this.procurar.Click += new System.EventHandler(this.procurar_Click);
+            // 
+            // textpesquisa
+            // 
+            this.textpesquisa.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textpesquisa.Location = new System.Drawing.Point(123, 76);
+            this.textpesquisa.Name = "textpesquisa";
+            this.textpesquisa.Size = new System.Drawing.Size(370, 25);
+            this.textpesquisa.TabIndex = 23;
+            this.textpesquisa.Text = "";
+            this.textpesquisa.TextChanged += new System.EventHandler(this.textpesquisa_TextChanged);
+            // 
+            // Document
+            // 
+            this.Document.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.Document_PrintPage);
+            // 
+            // Preview
+            // 
+            this.Preview.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.Preview.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.Preview.ClientSize = new System.Drawing.Size(400, 300);
+            this.Preview.Enabled = true;
+            this.Preview.Icon = ((System.Drawing.Icon)(resources.GetObject("Preview.Icon")));
+            this.Preview.Name = "Preview";
+            this.Preview.Visible = false;
+            // 
             // Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,6 +549,8 @@ namespace Sierra
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.painel.ResumeLayout(false);
+            this.painel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,5 +593,13 @@ namespace Sierra
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel painel;
+        private System.Windows.Forms.Button Voltar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button procurar;
+        private System.Windows.Forms.RichTextBox textpesquisa;
+        private System.Drawing.Printing.PrintDocument Document;
+        private System.Windows.Forms.PrintPreviewDialog Preview;
     }
 }

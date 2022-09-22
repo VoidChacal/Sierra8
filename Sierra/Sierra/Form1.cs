@@ -48,8 +48,13 @@ namespace Sierra
             public int codigo;
             public string descricao;
             public int unidade;
+            public int quantidade;
+            public int pdc;
+            public int pdv;
 
         }
+        static public produtos[] Produtos = new produtos[10];
+        static public int contProdutos = 0;
         public Form1()
         {
             InitializeComponent();
@@ -147,6 +152,16 @@ namespace Sierra
                 }
             }
             objImpressao.DrawString(Dados, new Font("Segoe Print", 12, FontStyle.Regular), Brushes.Black, 50, 50);
+        }
+
+        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clientesToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

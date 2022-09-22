@@ -244,12 +244,13 @@ namespace Sierra
             objImpressao.DrawString(Dados, new Font("Segoe Print", 12, FontStyle.Regular), Brushes.Black, 50, 50);
         }
 
-        private void Documento2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-           
-        }
 
         private void Preview1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textcodigo_TextChanged(object sender, EventArgs e)
         {
 
         }
