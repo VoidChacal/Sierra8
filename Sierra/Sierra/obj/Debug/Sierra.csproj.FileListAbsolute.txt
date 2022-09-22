@@ -13,9 +13,7 @@ C:\Users\Aluno\Desktop\Sierra\Sierra\Sierra\obj\Debug\Sierra.pdb
 E:\Sierra8-main\Sierra\Sierra\Sierra\bin\Debug\Sierra.exe.config
 E:\Sierra8-main\Sierra\Sierra\Sierra\bin\Debug\Sierra.exe
 E:\Sierra8-main\Sierra\Sierra\Sierra\bin\Debug\Sierra.pdb
-E:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.csproj.AssemblyReference.cache
 E:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.Form1.resources
-E:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.Menu.resources
 E:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.Produtos.resources
 E:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.Properties.Resources.resources
 E:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.Usuarios.resources
@@ -37,3 +35,5 @@ F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.csproj.GenerateResource.ca
 F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.csproj.CoreCompileInputs.cache
 F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.exe
 F:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.pdb
+E:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.Cadastrar.resources
+E:\Sierra8-main\Sierra\Sierra\Sierra\obj\Debug\Sierra.csproj.AssemblyReference.cache

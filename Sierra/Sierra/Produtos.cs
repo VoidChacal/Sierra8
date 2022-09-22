@@ -78,7 +78,6 @@ namespace Sierra
         {
             Application.Exit();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (atual > 0)
@@ -213,12 +212,12 @@ namespace Sierra
             string Dados;
             Graphics objImpressao = e.Graphics;
 
-            Dados = "FICHA DO USUÁRIO" + (char)10 + (char)10;
+            Dados = "FICHA DOS PRODUTOS" + (char)10 + (char)10;
             Dados = Dados + "----------------------------------------------------------------------------" + (char)10 + (char)10;
             Dados = Dados + "Código: " + textcodigo.Text + (char)10 + (char)10;
             Dados = Dados + "Descrição: " + textdescricao.Text + (char)10 + (char)10;
             Dados = Dados + "Quantidade: " + textquantidade.Text + (char)10 + (char)10;
-            Dados = Dados + "Preço de custo: " + textcusto.Text;
+            Dados = Dados + "Preço de custo: " + textcusto.Text + (char)10 + (char)10;
             Dados = Dados + "Preço de venda: " + textvenda.Text;
             objImpressao.DrawString(Dados, new Font("Segoe Print", 12, FontStyle.Regular), Brushes.Black, 50, 50);
         }
@@ -226,6 +225,17 @@ namespace Sierra
         private void textcusto_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Produtos_Load(object sender, EventArgs e)
+        {
+            desativarEdicao();
+            mostrardados();
+        }
+
+        private void Imprimir_Click(object sender, EventArgs e)
+        {
+            Preview.ShowDialog();
         }
     }
 }

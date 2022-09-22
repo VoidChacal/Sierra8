@@ -30,18 +30,6 @@ namespace Sierra
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Produtos));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.produtosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.clientesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.produtosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Código = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -73,98 +61,9 @@ namespace Sierra
             this.textpesquisa = new System.Windows.Forms.RichTextBox();
             this.Document = new System.Drawing.Printing.PrintDocument();
             this.Preview = new System.Windows.Forms.PrintPreviewDialog();
-            this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.painel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.White;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrosToolStripMenuItem,
-            this.relatoriosToolStripMenuItem,
-            this.sairToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(908, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // cadastrosToolStripMenuItem
-            // 
-            this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem1,
-            this.toolStripSeparator4,
-            this.produtosToolStripMenuItem1});
-            this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.cadastrosToolStripMenuItem.Text = "Cadastros";
-            // 
-            // clientesToolStripMenuItem1
-            // 
-            this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
-            this.clientesToolStripMenuItem1.Text = "Usuarios";
-            this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click_1);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(116, 6);
-            // 
-            // produtosToolStripMenuItem1
-            // 
-            this.produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
-            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
-            this.produtosToolStripMenuItem1.Text = "Clientes";
-            // 
-            // relatoriosToolStripMenuItem
-            // 
-            this.relatoriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuariosToolStripMenuItem2,
-            this.toolStripSeparator5,
-            this.clientesToolStripMenuItem2,
-            this.toolStripSeparator6,
-            this.produtosToolStripMenuItem2});
-            this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
-            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.relatoriosToolStripMenuItem.Text = "Relatorios";
-            // 
-            // usuariosToolStripMenuItem2
-            // 
-            this.usuariosToolStripMenuItem2.Name = "usuariosToolStripMenuItem2";
-            this.usuariosToolStripMenuItem2.Size = new System.Drawing.Size(122, 22);
-            this.usuariosToolStripMenuItem2.Text = "Usuarios";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(119, 6);
-            // 
-            // clientesToolStripMenuItem2
-            // 
-            this.clientesToolStripMenuItem2.Name = "clientesToolStripMenuItem2";
-            this.clientesToolStripMenuItem2.Size = new System.Drawing.Size(122, 22);
-            this.clientesToolStripMenuItem2.Text = "Clientes";
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(119, 6);
-            // 
-            // produtosToolStripMenuItem2
-            // 
-            this.produtosToolStripMenuItem2.Name = "produtosToolStripMenuItem2";
-            this.produtosToolStripMenuItem2.Size = new System.Drawing.Size(122, 22);
-            this.produtosToolStripMenuItem2.Text = "Produtos";
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // Código
             // 
@@ -311,6 +210,7 @@ namespace Sierra
             this.Imprimir.TabIndex = 50;
             this.Imprimir.Text = "Imprimir";
             this.Imprimir.UseVisualStyleBackColor = false;
+            this.Imprimir.Click += new System.EventHandler(this.Imprimir_Click);
             // 
             // Alterar
             // 
@@ -412,7 +312,7 @@ namespace Sierra
             this.Sair.Name = "Sair";
             this.Sair.Size = new System.Drawing.Size(120, 44);
             this.Sair.TabIndex = 42;
-            this.Sair.Text = "Sair";
+            this.Sair.Text = "Voltar";
             this.Sair.UseVisualStyleBackColor = false;
             this.Sair.Click += new System.EventHandler(this.Sair_Click);
             // 
@@ -443,7 +343,7 @@ namespace Sierra
             this.groupBox1.Controls.Add(this.textvenda);
             this.groupBox1.Font = new System.Drawing.Font("Segoe Print", 14.25F);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.groupBox1.Location = new System.Drawing.Point(12, 41);
+            this.groupBox1.Location = new System.Drawing.Point(12, 30);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(871, 444);
             this.groupBox1.TabIndex = 52;
@@ -530,6 +430,7 @@ namespace Sierra
             this.Preview.AutoScrollMargin = new System.Drawing.Size(0, 0);
             this.Preview.AutoScrollMinSize = new System.Drawing.Size(0, 0);
             this.Preview.ClientSize = new System.Drawing.Size(400, 300);
+            this.Preview.Document = this.Document;
             this.Preview.Enabled = true;
             this.Preview.Icon = ((System.Drawing.Icon)(resources.GetObject("Preview.Icon")));
             this.Preview.Name = "Preview";
@@ -542,31 +443,19 @@ namespace Sierra
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(10)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(908, 497);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Produtos";
             this.Text = "Produtos";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.Produtos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.painel.ResumeLayout(false);
             this.painel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem2;
         private System.Windows.Forms.Label Código;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -589,9 +478,6 @@ namespace Sierra
         private System.Windows.Forms.Button Cancelar;
         private System.Windows.Forms.Button Anterior;
         private System.Windows.Forms.Button Sair;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel painel;
         private System.Windows.Forms.Button Voltar;

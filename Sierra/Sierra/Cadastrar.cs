@@ -65,10 +65,10 @@ namespace Sierra
         private void mostrardados()
         {
             txtcodigo.Text = Form1.Cliente[atual].codigo.ToString();
-            txtcep.Text = Form1.Cliente[atual].cep.ToString();
-            txtcpf.Text = Form1.Cliente[atual].cpf.ToString();
-            txtrg.Text = Form1.Cliente[atual].rg.ToString();
-            txttelefone.Text = Form1.Cliente[atual].telefone.ToString();
+            txtcep.Text = Form1.Cliente[atual].cep;
+            txtcpf.Text = Form1.Cliente[atual].cpf;
+            txtrg.Text = Form1.Cliente[atual].rg;
+            txttelefone.Text = Form1.Cliente[atual].telefone;
             txtcidade.Text = Form1.Cliente[atual].cidade;
             txtemail.Text = Form1.Cliente[atual].email;
             txtendereco.Text = Form1.Cliente[atual].endereco;
@@ -106,30 +106,30 @@ namespace Sierra
             if (tipoEdicao)
             {
                 Form1.Cliente[Form1.contCliente].codigo = int.Parse(txtcodigo.Text);
-                Form1.Cliente[Form1.contCliente].rg = int.Parse(txtrg.Text);
+                Form1.Cliente[Form1.contCliente].rg = txtrg.Text;
                 Form1.Cliente[Form1.contCliente].nome = txtnome.Text;
                 Form1.Cliente[Form1.contCliente].bairro = txtbairro.Text;
-                Form1.Cliente[Form1.contCliente].cep = int.Parse(txtcep.Text);
+                Form1.Cliente[Form1.contCliente].cep = txtcep.Text;
                 Form1.Cliente[Form1.contCliente].cidade = txtcidade.Text;
-                Form1.Cliente[Form1.contCliente].cpf = int.Parse(txtcpf.Text);
+                Form1.Cliente[Form1.contCliente].cpf = txtcpf.Text;
                 Form1.Cliente[Form1.contCliente].endereco = txtendereco.Text;
                 Form1.Cliente[Form1.contCliente].email = txtemail.Text;
-                Form1.Cliente[Form1.contCliente].telefone = int.Parse(txttelefone.Text);
+                Form1.Cliente[Form1.contCliente].telefone = txttelefone.Text;
                 Form1.Cliente[Form1.contCliente].uf = txtuf.Text;
 
             }
             else
             {
-                Form1.Cliente[Form1.contCliente].cep = int.Parse(txtcep.Text);
-                Form1.Cliente[Form1.contCliente].cpf = int.Parse(txtcpf.Text);
-                Form1.Cliente[Form1.contCliente].telefone = int.Parse(txttelefone.Text);
-                Form1.Cliente[Form1.contCliente].rg = int.Parse(txtrg.Text);
-                Form1.Cliente[Form1.contCliente].nome = txtnome.Text;
-                Form1.Cliente[Form1.contCliente].bairro = txtbairro.Text;
-                Form1.Cliente[Form1.contCliente].cidade = txtcidade.Text;
-                Form1.Cliente[Form1.contCliente].email = txtemail.Text;
-                Form1.Cliente[Form1.contCliente].endereco = txtendereco.Text;
-                Form1.Cliente[Form1.contCliente].uf = txtuf.Text;
+                Form1.Cliente[atual].cep = txtcep.Text;
+                Form1.Cliente[atual].cpf = txtcpf.Text;
+                Form1.Cliente[atual].telefone = txttelefone.Text;
+                Form1.Cliente[atual].rg = txtrg.Text;
+                Form1.Cliente[atual].nome = txtnome.Text;
+                Form1.Cliente[atual].bairro = txtbairro.Text;
+                Form1.Cliente[atual].cidade = txtcidade.Text;
+                Form1.Cliente[atual].email = txtemail.Text;
+                Form1.Cliente[atual].endereco = txtendereco.Text;
+                Form1.Cliente[atual].uf = txtuf.Text;
             }
             desabilitarEdicao();
         }
@@ -138,16 +138,16 @@ namespace Sierra
         {
             if(Form1.contCliente > 0)
             {
-                txtnome.Text = "";
-                txtcpf.Text = "";
-                txtcep.Text = "";
-                txtemail.Text = "";
-                txtendereco.Text = "";
-                txttelefone.Text = "";
-                txtuf.Text = "";
-                txtrg.Text = "";
-                txtbairro.Text = "";
-                txtcidade.Text = "";
+                Form1.Cliente[atual].nome = "";
+                Form1.Cliente[atual].cpf = "";
+                Form1.Cliente[atual].cep = "";
+                Form1.Cliente[atual].email = "";
+                Form1.Cliente[atual].endereco = "";
+                Form1.Cliente[atual].telefone = "";
+                Form1.Cliente[atual].uf = "";
+                Form1.Cliente[atual].rg = "";
+                Form1.Cliente[atual].bairro = "";
+                Form1.Cliente[atual].cidade = "";
                 mostrardados();
             }
         }
@@ -233,13 +233,29 @@ namespace Sierra
             Dados = Dados + "Nome: " + txtnome.Text + (char)10 + (char)10;
             Dados = Dados + "CPF: " + txtcpf.Text + (char)10 + (char)10;
             Dados = Dados + "RG: " + txtrg.Text + (char)10 + (char)10;
-            Dados = Dados + "Endereço: " + txtendereco.Text;
-            Dados = Dados + "Bairro: " + txtbairro.Text;
-            Dados = Dados + "Cidade: " + txtcidade.Text;
-            Dados = Dados + "UF: " + txtuf.Text;
-            Dados = Dados + "CEP: " + txtcep.Text;
+            Dados = Dados + "Endereço: " + txtendereco.Text + (char)10 + (char)10;
+            Dados = Dados + "Bairro: " + txtbairro.Text + (char)10 + (char)10;
+            Dados = Dados + "Cidade: " + txtcidade.Text + (char)10 + (char)10;
+            Dados = Dados + "UF: " + txtuf.Text + (char)10 + (char)10;
+            Dados = Dados + "CEP: " + txtcep.Text + (char)10 + (char)10;
             Dados = Dados + "Email: " + txtemail.Text;
             objImpressao.DrawString(Dados, new Font("Segoe Print", 12, FontStyle.Regular), Brushes.Black, 50, 50);
+        }
+
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+            painel.Visible = false;
+        }
+
+        private void sair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Cadastrar_Load(object sender, EventArgs e)
+        {
+            desabilitarEdicao();
+            mostrardados();
         }
     }
 }

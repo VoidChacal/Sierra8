@@ -37,24 +37,23 @@ namespace Sierra
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.produtosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.clientesToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.clientesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.produtosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printUsuario = new System.Drawing.Printing.PrintDocument();
+            this.RelUsuar = new System.Windows.Forms.PrintPreviewDialog();
+            this.CadUsuario = new System.Windows.Forms.Button();
+            this.CadClientes = new System.Windows.Forms.Button();
+            this.CadProdutos = new System.Windows.Forms.Button();
+            this.RelUsuario = new System.Windows.Forms.Button();
+            this.RelClientes = new System.Windows.Forms.Button();
+            this.RelProdutos = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.printClientes = new System.Drawing.Printing.PrintDocument();
+            this.printProdutos = new System.Drawing.Printing.PrintDocument();
+            this.PreviewClientes = new System.Windows.Forms.PrintPreviewDialog();
+            this.PreviewProdutos = new System.Windows.Forms.PrintPreviewDialog();
+            this.Sair = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -96,123 +95,175 @@ namespace Sierra
             this.produtosToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
             // 
-            // menuStrip1
+            // printUsuario
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrosToolStripMenuItem,
-            this.relatoriosToolStripMenuItem,
-            this.sairToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(908, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            this.printUsuario.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // cadastrosToolStripMenuItem
+            // RelUsuar
             // 
-            this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem1,
-            this.toolStripSeparator4,
-            this.produtosToolStripMenuItem1,
-            this.toolStripSeparator3,
-            this.clientesToolStripMenuItem3});
-            this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.cadastrosToolStripMenuItem.Text = "Cadastros";
-            this.cadastrosToolStripMenuItem.Click += new System.EventHandler(this.cadastrosToolStripMenuItem_Click);
+            this.RelUsuar.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.RelUsuar.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.RelUsuar.ClientSize = new System.Drawing.Size(400, 300);
+            this.RelUsuar.Document = this.printUsuario;
+            this.RelUsuar.Enabled = true;
+            this.RelUsuar.Icon = ((System.Drawing.Icon)(resources.GetObject("RelUsuar.Icon")));
+            this.RelUsuar.Name = "printPreviewDialog1";
+            this.RelUsuar.Visible = false;
+            this.RelUsuar.Load += new System.EventHandler(this.RelUsuar_Load);
             // 
-            // clientesToolStripMenuItem1
+            // CadUsuario
             // 
-            this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.clientesToolStripMenuItem1.Text = "Usuarios";
-            this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
+            this.CadUsuario.BackColor = System.Drawing.Color.Black;
+            this.CadUsuario.Font = new System.Drawing.Font("Segoe Print", 14.25F);
+            this.CadUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.CadUsuario.Location = new System.Drawing.Point(116, 146);
+            this.CadUsuario.Name = "CadUsuario";
+            this.CadUsuario.Size = new System.Drawing.Size(175, 74);
+            this.CadUsuario.TabIndex = 2;
+            this.CadUsuario.Text = "Usuario";
+            this.CadUsuario.UseVisualStyleBackColor = false;
+            this.CadUsuario.Click += new System.EventHandler(this.CadUsuario_Click);
             // 
-            // toolStripSeparator4
+            // CadClientes
             // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
+            this.CadClientes.BackColor = System.Drawing.Color.Black;
+            this.CadClientes.Font = new System.Drawing.Font("Segoe Print", 14.25F);
+            this.CadClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.CadClientes.Location = new System.Drawing.Point(116, 242);
+            this.CadClientes.Name = "CadClientes";
+            this.CadClientes.Size = new System.Drawing.Size(175, 74);
+            this.CadClientes.TabIndex = 3;
+            this.CadClientes.Text = "Clientes";
+            this.CadClientes.UseVisualStyleBackColor = false;
+            this.CadClientes.Click += new System.EventHandler(this.CadClientes_Click);
             // 
-            // produtosToolStripMenuItem1
+            // CadProdutos
             // 
-            this.produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
-            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.produtosToolStripMenuItem1.Text = "Produtos";
+            this.CadProdutos.BackColor = System.Drawing.Color.Black;
+            this.CadProdutos.Font = new System.Drawing.Font("Segoe Print", 14.25F);
+            this.CadProdutos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.CadProdutos.Location = new System.Drawing.Point(116, 334);
+            this.CadProdutos.Name = "CadProdutos";
+            this.CadProdutos.Size = new System.Drawing.Size(175, 74);
+            this.CadProdutos.TabIndex = 4;
+            this.CadProdutos.Text = "Produtos";
+            this.CadProdutos.UseVisualStyleBackColor = false;
+            this.CadProdutos.Click += new System.EventHandler(this.CadProdutos_Click);
             // 
-            // toolStripSeparator3
+            // RelUsuario
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            this.RelUsuario.BackColor = System.Drawing.Color.Black;
+            this.RelUsuario.Font = new System.Drawing.Font("Segoe Print", 14.25F);
+            this.RelUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.RelUsuario.Location = new System.Drawing.Point(625, 146);
+            this.RelUsuario.Name = "RelUsuario";
+            this.RelUsuario.Size = new System.Drawing.Size(175, 74);
+            this.RelUsuario.TabIndex = 5;
+            this.RelUsuario.Text = "Usuario";
+            this.RelUsuario.UseVisualStyleBackColor = false;
+            this.RelUsuario.Click += new System.EventHandler(this.RelUsuario_Click);
             // 
-            // clientesToolStripMenuItem3
+            // RelClientes
             // 
-            this.clientesToolStripMenuItem3.Name = "clientesToolStripMenuItem3";
-            this.clientesToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
-            this.clientesToolStripMenuItem3.Text = "Clientes";
-            this.clientesToolStripMenuItem3.Click += new System.EventHandler(this.clientesToolStripMenuItem3_Click);
+            this.RelClientes.BackColor = System.Drawing.Color.Black;
+            this.RelClientes.Font = new System.Drawing.Font("Segoe Print", 14.25F);
+            this.RelClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.RelClientes.Location = new System.Drawing.Point(625, 242);
+            this.RelClientes.Name = "RelClientes";
+            this.RelClientes.Size = new System.Drawing.Size(175, 74);
+            this.RelClientes.TabIndex = 6;
+            this.RelClientes.Text = "Clientes";
+            this.RelClientes.UseVisualStyleBackColor = false;
+            this.RelClientes.Click += new System.EventHandler(this.RelClientes_Click);
             // 
-            // relatoriosToolStripMenuItem
+            // RelProdutos
             // 
-            this.relatoriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuariosToolStripMenuItem2,
-            this.toolStripSeparator5,
-            this.clientesToolStripMenuItem2,
-            this.toolStripSeparator6,
-            this.produtosToolStripMenuItem2});
-            this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
-            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.relatoriosToolStripMenuItem.Text = "Relatorios";
+            this.RelProdutos.BackColor = System.Drawing.Color.Black;
+            this.RelProdutos.Font = new System.Drawing.Font("Segoe Print", 14.25F);
+            this.RelProdutos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.RelProdutos.Location = new System.Drawing.Point(625, 334);
+            this.RelProdutos.Name = "RelProdutos";
+            this.RelProdutos.Size = new System.Drawing.Size(175, 74);
+            this.RelProdutos.TabIndex = 7;
+            this.RelProdutos.Text = "Produtos";
+            this.RelProdutos.UseVisualStyleBackColor = false;
+            this.RelProdutos.Click += new System.EventHandler(this.RelProdutos_Click);
             // 
-            // usuariosToolStripMenuItem2
+            // label1
             // 
-            this.usuariosToolStripMenuItem2.Name = "usuariosToolStripMenuItem2";
-            this.usuariosToolStripMenuItem2.Size = new System.Drawing.Size(122, 22);
-            this.usuariosToolStripMenuItem2.Text = "Usuarios";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.label1.Location = new System.Drawing.Point(105, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(211, 64);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Cadastros";
             // 
-            // toolStripSeparator5
+            // label2
             // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(119, 6);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.label2.Location = new System.Drawing.Point(614, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(212, 64);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Relatorios";
             // 
-            // clientesToolStripMenuItem2
+            // printClientes
             // 
-            this.clientesToolStripMenuItem2.Name = "clientesToolStripMenuItem2";
-            this.clientesToolStripMenuItem2.Size = new System.Drawing.Size(122, 22);
-            this.clientesToolStripMenuItem2.Text = "Clientes";
+            this.printClientes.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printClientes_PrintPage);
             // 
-            // toolStripSeparator6
+            // printProdutos
             // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(119, 6);
+            this.printProdutos.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printProdutos_PrintPage);
             // 
-            // produtosToolStripMenuItem2
+            // PreviewClientes
             // 
-            this.produtosToolStripMenuItem2.Name = "produtosToolStripMenuItem2";
-            this.produtosToolStripMenuItem2.Size = new System.Drawing.Size(122, 22);
-            this.produtosToolStripMenuItem2.Text = "Produtos";
+            this.PreviewClientes.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.PreviewClientes.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.PreviewClientes.ClientSize = new System.Drawing.Size(400, 300);
+            this.PreviewClientes.Document = this.printClientes;
+            this.PreviewClientes.Enabled = true;
+            this.PreviewClientes.Icon = ((System.Drawing.Icon)(resources.GetObject("PreviewClientes.Icon")));
+            this.PreviewClientes.Name = "printPreviewDialog1";
+            this.PreviewClientes.Visible = false;
             // 
-            // sairToolStripMenuItem
+            // PreviewProdutos
             // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            this.PreviewProdutos.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.PreviewProdutos.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.PreviewProdutos.ClientSize = new System.Drawing.Size(400, 300);
+            this.PreviewProdutos.Document = this.printProdutos;
+            this.PreviewProdutos.Enabled = true;
+            this.PreviewProdutos.Icon = ((System.Drawing.Icon)(resources.GetObject("PreviewProdutos.Icon")));
+            this.PreviewProdutos.Name = "printPreviewDialog1";
+            this.PreviewProdutos.Visible = false;
             // 
-            // printDocument1
+            // Sair
             // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            this.Sair.BackColor = System.Drawing.Color.Black;
+            this.Sair.Font = new System.Drawing.Font("Segoe Print", 14.25F);
+            this.Sair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.Sair.Location = new System.Drawing.Point(366, 361);
+            this.Sair.Name = "Sair";
+            this.Sair.Size = new System.Drawing.Size(175, 74);
+            this.Sair.TabIndex = 10;
+            this.Sair.Text = "Sair";
+            this.Sair.UseVisualStyleBackColor = false;
+            this.Sair.Click += new System.EventHandler(this.Sair_Click);
             // 
-            // printPreviewDialog1
+            // label3
             // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.label3.Location = new System.Drawing.Point(366, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(175, 64);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Sierra8";
             // 
             // Form1
             // 
@@ -220,14 +271,21 @@ namespace Sierra
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(10)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(908, 497);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Sair);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.RelProdutos);
+            this.Controls.Add(this.RelClientes);
+            this.Controls.Add(this.RelUsuario);
+            this.Controls.Add(this.CadProdutos);
+            this.Controls.Add(this.CadClientes);
+            this.Controls.Add(this.CadUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Cadastrar";
+            this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip1.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,22 +299,22 @@ namespace Sierra
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem3;
+        private System.Drawing.Printing.PrintDocument printUsuario;
+        private System.Windows.Forms.PrintPreviewDialog RelUsuar;
+        private System.Windows.Forms.Button CadUsuario;
+        private System.Windows.Forms.Button CadClientes;
+        private System.Windows.Forms.Button CadProdutos;
+        private System.Windows.Forms.Button RelUsuario;
+        private System.Windows.Forms.Button RelClientes;
+        private System.Windows.Forms.Button RelProdutos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Drawing.Printing.PrintDocument printClientes;
+        private System.Drawing.Printing.PrintDocument printProdutos;
+        private System.Windows.Forms.PrintPreviewDialog PreviewClientes;
+        private System.Windows.Forms.PrintPreviewDialog PreviewProdutos;
+        private System.Windows.Forms.Button Sair;
+        private System.Windows.Forms.Label label3;
     }
 }
 
