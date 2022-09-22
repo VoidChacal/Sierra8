@@ -116,6 +116,7 @@ namespace Sierra
                 Form1.Cliente[Form1.contCliente].email = txtemail.Text;
                 Form1.Cliente[Form1.contCliente].telefone = txttelefone.Text;
                 Form1.Cliente[Form1.contCliente].uf = txtuf.Text;
+                atual = Form1.contCliente++;
 
             }
             else

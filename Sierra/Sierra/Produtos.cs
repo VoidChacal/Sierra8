@@ -107,7 +107,7 @@ namespace Sierra
         {
             if (Form1.contProdutos < 10)
             {
-                textcodigo.Text = (Form1.contUsuario + 1).ToString();
+                textcodigo.Text = (Form1.contProdutos + 1).ToString();
                 textdescricao.Text = "";
                 textcusto.Text = "";
                 textquantidade.Text = "";
